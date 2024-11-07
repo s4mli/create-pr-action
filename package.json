@@ -1,0 +1,16 @@
+{
+  "name": "create-pr-action",
+  "version": "1.0.0",
+  "description": "Github action to create a PR.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js --license licenses.txt"
+  },
+  "author": "s4mli",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
+  }
+}

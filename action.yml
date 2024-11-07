@@ -1,0 +1,43 @@
+name: "Issue PR"
+description: "Create a PR"
+inputs:
+  head:
+    description: "The head ref."
+    required: true
+  base:
+    description: "The base branch of the PR. Defaults to main."
+    required: false
+  draft:
+    description: "Draft or not. Defaults to true."
+    required: false
+  title:
+    description: "The title of the PR. Defaults to head."
+    required: false
+  body:
+    description: "The body of the PR. Defaults to head."
+    required: false
+  repository:
+    description: "The owner/repo in which the PR shall be created. Defaults to current repo."
+    required: false
+  labels:
+    description: "A comma-separated list of labels to be set on this PR. Defaults to WIP."
+    required: false
+  assignees:
+    description: "A comma-separated list of GitHub logins that should be assigned to this PR."
+    required: false
+  reviewers:
+    description: "A comma-separated list of GitHub logins that should review this PR."
+    required: false
+  team_reviewers:
+    description: "A comma-separated list of GitHub team slugs that should review this PR."
+    required: false
+outputs:
+  number:
+    description: "PR number."
+  url:
+    description: "RP url."
+  created:
+    description: "String value, 'false': branch exists, 'true': branch created."
+runs:
+  using: "node20"
+  main: "dist/index.js"
